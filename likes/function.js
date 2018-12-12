@@ -31,25 +31,13 @@
  * // returns "Alex, Jacob and 2 others like this"
  */
 
-export default function likes(array) {
-  if (!Array.isArray(array)) {
-    throw 'Names must be an array.'
-  }
-
-  let length = array.length
-  let ending = (length <= 1) ? 'likes this' : 'like this'
-
-  switch (length) {
-    case 0:
-      return `no one ${ ending }`
-    case 1:
-      return `${ array[0] } ${ ending }`
-    case 2:
-      return `${ array.join(' and ') } ${ ending }`
-    case 3:
-      return `${ array.shift() }, ${ array.join(' and ') } ${ ending }`
-    default:
-      let [first, second] = array
-      return `${ first }, ${ second } and ${ length - 2 } others ${ ending }`
+export default function likes(names) {
+  names = (names.length) ? names : ['no one']
+  let [a, b, c, ...others] = names
+  switch (names.length) {
+    case 1: return `${ a } likes this`
+    case 2: return `${ a } and ${ b } like this`
+    case 3: return `${ a }, ${ b } and ${ c } like this`
+    default: return `${ a }, ${ b } and ${ others.length + 1 } others like this`
   }
 }
