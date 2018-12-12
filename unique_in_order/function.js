@@ -5,7 +5,7 @@
  * with the same value next to each other
  * and preserving the original order of elements.
  * 
- * @param {String}
+ * @param {String, Array}
  * @returns {Array}
  * 
  * @example
