@@ -14,6 +14,5 @@
  */
 
 function unique_in_order(iterable) {
-  return Array.prototype.filter
-    .call(iterable, (a, i) => iterable[i - 1] !== a)
+  return [...iterable].filter((n, i, arr) => arr[i - 1] !== n)
 }
