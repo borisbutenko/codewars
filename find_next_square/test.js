@@ -1,3 +1,5 @@
+// TODO: tests
+
 Test.describe("findNextSquare", function() {
   Test.it("should return the next square for perfect squares", function() {
     Test.assertEquals(findNextSquare(121), 144, "Wrong output for 121");
