@@ -23,4 +23,7 @@
 function find_next_square(sq) {
   let sqrt = Math.sqrt(sq)
   return (sqrt ^ 0) === sqrt ? Math.pow(++sqrt, 2) : -1
+  // --- other solution
+  // let sqrt = Math.sqrt(sq)
+  // return Number.isInteger(sqrt) ? Math.pow(++sqrt, 2) : -1
 }
