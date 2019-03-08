@@ -26,23 +26,6 @@
 function incrementString (string) {
   let number = string.match(/\d+$/)
   if (!number) return string + 1
-
-  string = string.replace(/\d+$/, '')
   number = number[0]
-
-  let result = Number(number)
-  let increment = result + 1
-
-  let zeroes = number.match(/^0+/)
-  if (!zeroes) return string + increment
-
-  zeroes = zeroes[0]
-
-  let resultWithZeroes = String(increment).padStart((zeroes + increment).length, '0')
-
-  if (String(increment).length > String(result).length || zeroes.length === number.length) {
-    return string + resultWithZeroes.slice(1)
-  }
-
-  return string + resultWithZeroes
+  return string.replace(/\d+$/, String(Number(number) + 1).padStart(number.length, '0'))
 }
