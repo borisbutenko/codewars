@@ -31,7 +31,7 @@
  * // returns "Alex, Jacob and 2 others like this"
  */
 
-function likes(names) {
+function likes (names) {
   names = (names.length) ? names : ['no one']
   let [a, b, c, ...others] = names
   switch (names.length) {
