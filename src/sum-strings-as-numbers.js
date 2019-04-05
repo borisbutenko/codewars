@@ -37,7 +37,6 @@ function sumStrings (a, b) {
 
   while (i--) {
     let n = String(Number(a[i]) + Number(b[i]) + prefix)
-    let out = n[1] || n[0]
 
     prefix = (n[1]) ? 1 : 0
     result[i] = n[1] || n[0]
