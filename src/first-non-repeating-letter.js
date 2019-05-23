@@ -30,18 +30,15 @@
  */
 
 function firstNonRepeatingLetter (str) {
-  let out = ''
-  for (let i = 0, l = str.length; i < l; i += 1) {
-    let char = str[i]
-    let substr = str.slice(0, i) + str.slice(i + 1)
-    if (!~substr.toLowerCase().indexOf(char.toLowerCase())) {
-      out = char
+  let [search, out] = [str.toLowerCase(), '']
+
+  for (let i in search) {
+    let char = search[i]
+    if (search.indexOf(char) === search.lastIndexOf(char)) {
+      out = str[i]
       break
     }
   }
+
   return out
 }
-
-console.log(
-  firstNonRepeatingLetter('sTreSS')
-)
