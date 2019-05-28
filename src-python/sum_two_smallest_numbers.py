@@ -1,7 +1,7 @@
 from typing import List
 
 
-def sum_two_smallest_numbers(numbers: List) -> int:
+def sum_two_smallest_numbers(numbers: List[int]) -> int:
     """
     Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers.
     No floats or empty arrays will be passed.

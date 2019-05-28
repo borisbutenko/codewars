@@ -1,7 +1,7 @@
 from typing import List
 
 
-def tickets(lst: List) -> str:
+def tickets(lst: List[int]) -> str:
     """
     The new "Avengers" movie has just been released!
     There are a lot of people at the cinema box office standing in a huge line.
