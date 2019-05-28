@@ -10,7 +10,7 @@ def find_it(lst: List) -> int or None:
 
     :param lst: Array of numbers
     :type lst: list
-    :return {int}:
+    :return int or None: counts number in lst or None
     """
     numbers = set(lst)
 
