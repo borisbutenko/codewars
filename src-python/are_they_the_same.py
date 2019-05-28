@@ -25,8 +25,4 @@ def comp(lst1: List[int],
         return False
 
     lst1 = list(map(lambda x: x * x, lst1))
-
-    lst1.sort()
-    lst2.sort()
-
-    return lst1 == lst2
+    return sorted(lst1) == sorted(lst2)
