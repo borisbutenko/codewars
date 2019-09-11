@@ -23,10 +23,9 @@
 function solved (str) {
   let getArr = arr => arr.sort().join('')
   let [len, arr] = [str.length, str.split('')]
-  
-  if (len % 2 === 0)
-    return getArr(arr)
 
-  arr.splice(Math.floor(len / 2), 1)
-  return getArr(arr)
+  if (len % 2 !== 0)
+    arr.splice(Math.floor(len / 2), 1)
+
+  return arr.sort().join('')
 }
