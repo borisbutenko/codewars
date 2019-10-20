@@ -1,3 +1,5 @@
+// --- https://www.codewars.com/kata/5941c545f5c394fef900000c
+
 class Warrior {
   constructor () {
     this._level = 1
